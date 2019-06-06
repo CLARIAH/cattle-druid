@@ -19,10 +19,9 @@ case ${1} in
         cd ${CATTLE_INSTALL_DIR}
 
         ## Replace tokens in code
-        sed -i "s/xxx/${AUTH_TOKEN}/" src/cattle.py
+        sed -i "s/xxx/${AUTH_TOKEN}/" src/cattle_druid.py
         sed -i "s/yyy/${MAILGUN_AUTH_TOKEN}/" src/druid_longer.py
-        sed -i "s/xyxyxy/${ERROR_MAIL_ADDRESS}/" src/cattle.py
-        sed -i "s/zzz/${SECRET_SESSION_KEY}/" src/cattle.py
+        sed -i "s/xyxyxy/${ERROR_MAIL_ADDRESS}/" src/cattle_druid.py
 
         # gunicorn -c src/gunicorn_config.py src.cattle:app
         python src/cattle.py

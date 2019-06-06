@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-
-# cattle: A Web service for COW
-
-# from flask import Flask, request, render_template, make_response, redirect, jsonify
 from werkzeug.utils import secure_filename
 # import requests
 import os
